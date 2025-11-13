@@ -2,7 +2,7 @@
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.vtucrack.com)](https://www.vtucrack.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/vtucrack-website?style=social)](https://github.com/yourusername/vtucrack-website/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/Avinashb722/vtucrack-website?style=social)](https://github.com/Avinashb722/vtucrack-website/stargazers)
 
 The ultimate platform for VTU students to download notes, question banks, lab manuals, model papers, and study resources from 1st to 8th semester — across CSE, AIML, ECE, EEE, MECH, CIVIL, and more.
 
@@ -83,7 +83,7 @@ vtucrack-website/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/vtucrack-website.git
+git clone https://github.com/Avinashb722/vtucrack-website.git
 ```
 
 2. Navigate to the project directory
