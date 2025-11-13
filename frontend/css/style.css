@@ -1,0 +1,345 @@
+
+/* =================== Layout & Grid =================== */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* Column – Default: 3 per row */
+.col-lg-2,
+.col-6 {
+  flex: 0 0 31%;
+  max-width: 31%;
+  padding: 10px;
+}
+
+/* Tablet (≤992px): 2 per row */
+@media (max-width: 992px) {
+  .col-lg-2,
+  .col-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding: 10px;
+  }
+}
+
+/* Mobile (≤576px): 1 full-width per row with padding */
+@media (max-width: 576px) {
+  .col-lg-2,
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 10px 20px 10px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+/* =================== Card Styling =================== */
+
+/* Card container */
+.s_card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  height: auto;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect */
+.s_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image wrapper */
+.o_card_img_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Smaller image */
+.o_card_img {
+  width: 100%;
+  height: 180px;  /* Fixed reasonable image height */
+  object-fit: cover;
+  display: block;
+}
+
+/* =================== Card Content =================== */
+
+/* Card body */
+.card-body {
+  text-align: center;
+  padding: 15px 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Card title */
+.card-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.card-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Description paragraph */
+.card-body p {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+/* Metadata */
+.card-body .text-muted {
+  font-size: 11px;
+  color: #888;
+}
+
+.card-body .text-danger {
+  font-weight: bold;
+  font-size: 12px;
+  color: #e91e63;
+}
+
+/* =================== Section Headings =================== */
+
+section h2,
+section h4,
+.s_blog_posts h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* =================== Additional Improvements =================== */
+
+/* Navbar improvements */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Form improvements */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Dropdown improvements */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.dropdown-item {
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Footer styling */
+footer {
+  background-color: #2c3e50 !important;
+}
+
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #3498db !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 8px 12px;
+  }
+}
+
+/* Loading animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.s_card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+
+
+
+
+
+  .footer {
+    background-color: #EDE9E5;
+    padding: 40px 20px;
+    border-top: 5px solid #D2986B;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+
+  .footer .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+
+  .footer-section:hover {
+    background-color: #D19A6B;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-section h3 {
+    background: #000;
+    color: #D19A6B;
+    padding: 10px;
+    margin: -20px -20px 15px -20px;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+
+  .footer-section:hover ul li a {
+    color: #fff;
+  }
+
+  .footer-section ul li a:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  .footer-section .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .footer-section .social-icons a img {
+    transition: transform 0.3s ease;
+  }
+
+  .footer-section .social-icons a:hover img {
+    transform: scale(1.1);
+  }

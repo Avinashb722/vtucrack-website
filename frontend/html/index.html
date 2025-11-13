@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTUCrack - Master Every Exam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body, #wrap {
+            background-color: #EDE9E5 !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navigation Styles */
+        .navbar-na {
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 3px;
+            padding: 8px 8px 8px 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .navbar-na::-webkit-scrollbar {
+            display: none;
+        }
+
+        .navbar-na li {
+            flex: 0 0 auto;
+        }
+
+        .navbar-na .nav-link {
+            font-weight: bold;
+            white-space: nowrap;
+            color: #D2986B !important;
+        }
+
+        /* Banner Styles */
+        .banner {
+            text-align: center;
+            padding: 50px 25px;
+            background-color: #EDE9E5;
+            color: black;
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: black;
+        }
+
+        .highlight {
+            color: #72f3f3;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+
+        /* Search Bar Styles */
+        .o_searchbar_form {
+            margin-bottom: 23px;
+        }
+
+        .oe_search_button {
+            background-color: #D19A6B;
+            color: white;
+            border: none;
+        }
+
+        /* Card Styles */
+        .s_card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .s_card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .o_card_img_wrapper {
+            overflow: hidden;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .o_card_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .s_card:hover .o_card_img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .card-title a:hover {
+            color: #D19A6B;
+        }
+
+        .text-muted {
+            font-size: 0.85rem;
+            color: #666 !important;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #EDE9E5;
+            padding: 40px 20px;
+            border-top: 5px solid #D2986B;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        .footer .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .footer-section:hover {
+            background-color: #D19A6B;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-section h3 {
+            background: #000;
+            color: #D19A6B;
+            padding: 10px;
+            margin: -20px -20px 15px -20px;
+            text-align: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .footer-section:hover ul li a {
+            color: #fff;
+        }
+
+        .footer-section ul li a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a img {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .banner {
+                padding: 30px 15px;
+            }
+            
+            .banner h1 {
+                font-size: 2rem;
+            }
+            
+            .banner p {
+                font-size: 1rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer-section {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .col-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Mobile Navigation -->
+        <section class="d-lg-none" style="background-image: url('/web/image/514-3c02055c/depositphotos_552832808-stock-photo-dark-gray-vector-polygon-abstract.webp'); padding: 20px;">
+            <ul role="menu" class="nav navbar-na">
+                <li><a role="menuitem" href="/" class="nav-link">Home</a></li>
+                <li><a role="menuitem" href="#" class="nav-link">Notes</a></li>
+                <li><a role="menuitem" href="#" class="nav-link">Labs</a></li>
+                <li><a role="menuitem" href="/about-us" class="nav-link">About Us</a></li>
+                <li><a role="menuitem" href="/contactus" class="nav-link">Contact Us</a></li>
+            </ul>
+
+            <!-- Search Bar -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <form method="get" class="o_searchbar_form" action="/website/search">
+                            <div role="search" class="input-group">
+                                <input type="search" name="search" class="search-query form-control" placeholder="Search..." autocomplete="off">
+                                <button type="submit" aria-label="Search" title="Search" class="btn oe_search_button">
+                                    <i class="bi bi-search">🔍</i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1>Master Every Exam with <span class="highlight">VTUCrack</span> <span class="emoji">📘</span></h1>
+            <p>💡 Study smart, save time, and crack VTU like a pro with <strong>VTUCrack Notes</strong>! <span class="emoji">🚀</span></p>
+        </div>
+
+        <!-- Main Content Section -->
+        <section class="py-5" style="background-color: #EDE9E5;">
+            <div class="container">
+                <div class="row g-3">
+                    <!-- First Year Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/firstyear">
+                                    <img src="/web/image/732-4451d217/fir.gif" alt="First year" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/firstyear">First Year</a></h3>
+                                <p>Download 2021–2022 scheme VTU notes, model papers, question banks…</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 21-12-2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CSE Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/cse">
+                                    <img src="/web/image/733-9a5b4dcd/cs.gif" alt="CSE" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/cse">CSE</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank of CSE 2022 scheme...</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 10-01-2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AIML Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/aiml">
+                                    <img src="/web/image/731-6511fc7b/asas.gif" alt="AIML" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/aiml">AIML</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank of AIML 2022 scheme...</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 02-03-2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ECE Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/ece">
+                                    <img src="/web/image/858-8b416856/cce.gif" alt="ECE" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/ece">ECE</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank of ECE 2022 scheme.</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 05-05-2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EEE Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/eee">
+                                    <img src="/web/image/859-a9a6e76b/eee.gif" alt="EEE" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/eee">EEE</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank of EEE 2022 scheme...</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 10-01-2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CIVIL Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/civil">
+                                    <img src="/web/image/860-d0cfc3b7/ci.gif" alt="CIVIL" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/civil">CIVIL</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank of CIVIL 2022 scheme...</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 02-03-2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MECH Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/mech">
+                                    <img src="/web/image/861-c874590d/me.gif" alt="MECH" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/mech">MECH</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank of MECH 2022 scheme...</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 02-03-2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LAB Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="/lab">
+                                    <img src="/web/image/862-527d075d/crack.gif" alt="LAB" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="/lab">LAB</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank of LAB 2022 scheme...</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 02-03-2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Year Card -->
+                    <div class="col-lg-2 col-6">
+                        <div class="s_card card shadow">
+                            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+                                <a href="#">
+                                    <img src="/web/image/863-f954d816/f.gif" alt="Final Year" class="o_card_img" loading="lazy">
+                                </a>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="#">FINAL YEAR</a></h3>
+                                <p>Download VTU notes, model paper, previous year paper, question bank</p>
+                                <div class="text-muted">👤 VTUCrack • 📅 02-03-2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertisement Section -->
+        <div class="text-center py-3">
+            <div class="ads">
+                <!-- Advertisement content can be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <!-- VTU Links -->
+            <div class="footer-section">
+                <h3>VTU Links</h3>
+                <ul>
+                    <li><a href="https://results.vtu.ac.in/">VTU Result</a></li>
+                    <li><a href="https://vtu.ac.in/en/category/administration/">VTU Circular</a></li>
+                    <li><a href="#">VTU Syllabus</a></li>
+                    <li><a href="https://vtu.ac.in/en/category/examination/">VTU Examination</a></li>
+                    <li><a href="https://vtu.ac.in/model-question-paper-b-e-b-tech-b-arch/">VTU Model Paper</a></li>
+                    <li><a href="https://vtu.ac.in/academic-calendar/">Academic Calendar</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/firstyear">First Year</a></li>
+                    <li><a href="/cse">CSE</a></li>
+                    <li><a href="/aiml">AIML</a></li>
+                    <li><a href="/request">Request Notes</a></li>
+                    <li><a href="/sgpa-calculator">SGPA Calculator</a></li>
+                    <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
+                </ul>
+            </div>
+
+            <!-- About -->
+            <div class="footer-section">
+                <h3>About VTUCrack</h3>
+                <ul>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://chat.whatsapp.com/C8GgL6KEyeV5BXgUPMb0Hx" target="_blank">
+                        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="https://t.me/vtucrack" target="_blank">
+                        <img src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="Telegram" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="https://www.instagram.com/vtucrack" target="_blank">
+                        <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" style="width: 40px; height: 40px;">
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    📍 Karnataka, Belagavi<br>
+                    📧 <a href="mailto:vtucrack96@gmail.com">vtucrack96@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
