@@ -16,7 +16,7 @@ VTUCrack is a student-centric learning platform built to help VTU engineering st
 ## 📌 Key Features
 
 ### 🎯 Academic Resources
-- 📚 **Notes for all branches** (CSE, AIML, ECE, EEE, MECH, CIVIL)
+- 📚 **Notes for all branches** (CSE, AIML)
 - 🧪 **Lab Manuals** (3rd to 6th semester)
 - 📝 **Model Question Papers**
 - 📘 **Previous Year Question Banks**
