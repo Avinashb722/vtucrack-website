@@ -73,30 +73,6 @@ vtucrack-website/
 ![VTUCrack Features](image/Screenshot%202025-11-13%20172109.png)
 *Features and navigation overview*
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Web browser
-- Basic knowledge of HTML/CSS/JavaScript
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/Avinashb722/vtucrack-website.git
-```
-
-2. Navigate to the project directory
-```bash
-cd vtucrack-website
-```
-
-3. Open the project
-```bash
-cd frontend/html
-# Open index.html in your browser
-```
-
 ## 📣 Follow VTUCrack
 
 Stay connected with us on social platforms:
